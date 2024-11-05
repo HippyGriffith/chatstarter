@@ -1,6 +1,6 @@
 "use client";
 import { api } from "@/convex/_generated/api";
-import { SignInButton } from "@clerk/clerk-react";
+import { SignInButton, SignOutButton } from "@clerk/clerk-react";
 import {
   useQuery,
   useMutation,
@@ -49,6 +49,7 @@ export default function Home() {
             <button type="submit">Send</button>
           </form>
         </div>
+        <SignOutButton />
       </Authenticated>
       <Unauthenticated>
         <SignInButton mode="modal">Sign in</SignInButton>
