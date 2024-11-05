@@ -19,8 +19,8 @@ export default function Home() {
     { sender: "Alice", content: "Hello, world!" },
     { sender: "Bob", content: "Hi, Alice!" },
   ]);*/
-  const messages = useQuery(api.functions.message.list);
-  const createMessage = useMutation(api.functions.message.create);
+  const messages = useQuery(api.functions.getMessages);
+  const createMessage = useMutation(api.functions.createMessage);
   const [input, setInput] = useState("");
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
